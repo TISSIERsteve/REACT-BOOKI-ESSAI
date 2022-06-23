@@ -1,0 +1,111 @@
+# CRUD HOTEL
+
+# POST http://localhost:3001/api/hotels 
+# Content-Type: application/json 
+
+# {
+#      	"name": "Le Palace",
+# 	"type":"Hotel",
+# 	"city": "France",
+# 	"address":"Balbla",
+# 	"distance": "500",
+#       "description":"bla",
+#       "moinsCher":"10"
+# }
+
+# PUT  http://localhost:3001/api/hotels/62b3fe2f1b48bac763cbacb3
+# Content-Type: application/json
+
+# {
+#       "name": "Le RITZ",
+#  	"type":"Hotel grand palace",
+#  	"city": "France",
+#  	"address":"Cannes",
+#  	"distance": "500",
+#        "description":"bla",
+#        "moinsCher":"10"
+# }
+
+# GET http://localhost:3001/api/hotels/62b40db37b93527f9d7ac30a
+# Content-Type: application/json
+
+# GET http://localhost:3001/api/hotels
+# Content-Type: application/json
+
+# DELETE http://localhost:3001/api/hotels/62b40db37b93527f9d7ac30a
+# Content-Type: application/json
+# ***************************** FIN **************************************
+
+# INSCRIPTION
+# POST http://localhost:3001/api/auth/signup
+# Content-Type: application/json
+
+# {
+# 	"name": "robert",
+# 	"email": "robert@robert.fr",
+# 	"password": "12345"
+# }
+# ***************************** FIN **************************************
+
+# CONNEXION
+# POST http://localhost:3001/api/auth/login
+# Content-Type: application/json
+
+# {
+# 	"email": "test@orange.fr",
+# 	"password": "123Kangoo123"
+	
+# }
+# ***************************** FIN **************************************
+
+# CRUD USERS
+
+# PUT http://localhost:3001/api/users/62b43dd96255a95f637c6c00
+# Content-Type: application/json
+
+# {
+# 	"name": "roberto",
+# 	"email": "test@orange.fr",
+#  	"password": "123Kangoo123"	
+# }
+
+# GET http://localhost:3001/api/users
+# Content-Type: application/json
+
+# GET http://localhost:3001/api/users/62b43dd96255a95f637c6c00
+# Content-Type: application/json
+
+# DELETE http://localhost:3001/api/users/62b43dd96255a95f637c6c00
+# Content-Type: application/json
+# ***************************** FIN **************************************
+
+# CRUD ROOMS
+
+# POST http://localhost:3001/api/rooms
+# Content-Type: application/json
+
+# {
+#       	"title": "Suite Impérial",
+# 		"price": "30000",
+# 		"maxPeople": "10",
+# 		"description": "Lumineuse"
+# }
+
+# PUT http://localhost:3001/api/rooms/62b46f893524c2f799b90462
+# Content-Type: application/json
+
+# {
+#       	"title": "Suite pour les riches",
+# 		"price": "1330000",
+# 		"maxPeople": "10",
+# 		"description": "Lumineuse"
+# }
+
+# GET http://localhost:3001/api/rooms
+# Content-Type: application/json
+
+# GET http://localhost:3001/api/rooms/62b470661382a136890be1ea
+# Content-Type: application/json
+
+# DELETE http://localhost:3001/api/rooms/62b470661382a136890be1ea
+# Content-Type: application/json
