@@ -1,0 +1,28 @@
+// FOOTER
+.section-footer {
+      display: flex;
+      justify-content: space-around;
+
+      @media screen and (max-width:768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+       }
+
+      h3 {
+            margin-bottom: 1.5rem;
+
+            @media screen and (max-width:768px) {
+                  text-align: center;
+             }
+      }
+
+      li {
+            margin-bottom: 1.2rem;
+
+            @media screen and (max-width:768px) {
+                  text-align: center;
+             }
+      }
+      
+}
