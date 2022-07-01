@@ -1,0 +1,112 @@
+// NOUVEL HOTEL
+.new-hotel {
+      border: 0.3rem solid rgb(117, 116, 116);
+      width: 60%;
+      margin: 0 auto;
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      margin-top: 5rem;
+
+      h1 {
+            text-align: center;
+            padding: 1rem;
+      }
+
+      form {
+            display: flex;
+            width: 100%;
+            margin: 0 auto;
+
+            .container-image {
+                  border-right: 0.1rem solid;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  width: 100%;
+                  
+                  .select-image {
+                        display: flex;
+                        flex-direction: column;
+                        
+                        label {
+                              padding: 1rem;
+                              font-size: 1.2rem;
+                              text-align: center;
+                              font-weight: bold;
+                        }
+
+                        input {
+                              margin-bottom: 1rem;
+                        }
+                  }
+                  
+                  img {
+                        margin-bottom: 2rem;
+                        width: 80%;
+                        // height: 10rem;
+                  }
+            }
+
+            .container-descriptif {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  justify-content: center;
+                  list-style-type: none;
+                  width: 100%;
+
+                  li {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 1rem;
+                        margin-top: 1rem;
+                  }
+
+                  label {
+                        margin-bottom: 1rem;
+                        font-size: 1.2rem;
+                  }
+
+                  input {
+                        padding: 1rem;
+                        border-radius: 0.5rem;
+                        border: 0.1rem solid $color-4;
+                        margin-bottom: 0.5rem;
+
+                        &::placeholder {
+                              font-style: italic;
+                        }
+                }
+            }
+
+            button {
+                  padding: 1rem;
+                  border-radius: 0.5rem;
+                  border: none;
+                  width: 20%;
+                  margin-top: 5rem;
+
+                  &:last-child {
+                        &:hover {
+                              background-color: $color-6;
+                              color: $color-2;
+                              font-weight: bold;
+                              transform: scale(1.2);
+                              font-size: 1.2rem;
+                        }       
+                  }
+            }
+            .create {
+                  &:hover {
+                        background-color: $color-10;
+                        color: $color-2;
+                        font-weight: bold;
+                        transform: scale(1.2);
+                        font-size: 1.2rem;
+                  } 
+            }
+      }
+      
+
+}

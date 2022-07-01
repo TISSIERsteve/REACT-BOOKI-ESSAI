@@ -3,6 +3,9 @@ const Hotel = require("../models/HotelsModels");
 // CREATE
 exports.createHotel = async (req, res, next) => {
 	const newHotel = new Hotel(req.body);
+	// const media_url = `${req.protocol}://${req.get("host")}/images/${
+	// 	req.file.filename
+	// }`;
 	try {
 		const createHotel = await newHotel.save();
 		res.status(200).json(createHotel);

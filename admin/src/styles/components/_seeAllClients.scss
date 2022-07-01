@@ -1,0 +1,114 @@
+// SEE ALL CLIENTS
+.seeAllClients {
+      border: 0.2rem solid;
+      width: 80%;
+      margin: 2rem auto;
+      border-radius: 0.5rem;
+      
+      
+      h1 {
+            text-align: center;
+            padding: 1rem;
+      }
+      
+      table {
+            position: relative;
+            width: 100%;
+      }
+
+      th {
+            border-top: 0.1rem solid rgba(64, 64, 64, 0.96);
+            border-right: 0.2rem solid black;
+            border-bottom: 0.2rem solid black;
+            padding: 1rem;      
+            font-size: 1.2rem;
+      }
+      
+      td {
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.2rem;
+      }
+      
+      .lastChild-td {
+            margin: 0 auto;
+            width: 14rem;
+            display: flex;
+            justify-content: space-between;
+      }
+      
+      button {
+            border-radius: 0.5rem;
+            padding: 0.3rem;
+      }
+      
+      .trash {
+            &:hover::before {
+                  content: "Supprimer";
+                  color: $color-6;
+                  font-weight: bold;
+            }       
+      }
+      
+      .stylo {
+            &:hover::before {
+                  content: "Modifier";
+                  color: $color-10;
+                  font-weight: bold;
+            }   
+      }  
+      
+      .modal {
+            display: none;
+            border: 0.2rem solid;
+            width: 91%;
+      }
+      
+      .modal.active {
+            position: relative;
+            position: absolute;
+            display: flex;
+            width: 100%;
+            
+            th {
+                  background-color: rgb(170, 167, 167);
+                  width: 25rem;
+                  height: 5rem;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+            }
+            
+            input {
+                  margin-top: 0.8rem;
+                  height: 3rem;
+                  width: 15rem;
+                  text-align: center;
+                  margin-left: 0.5rem;
+                  z-index: 0;
+
+            }
+
+            button {
+                  &:hover::before {
+                        content: "Valider";
+                        color: $color-3;
+                        font-weight: bold;
+                  }    
+            }
+
+            .retour {
+                  &:hover::before {
+                        content: "Annuler";
+                        color: $color-10;
+                        font-weight: bold;
+                  }   
+            }   
+      }
+}
+.spanss {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+}
+

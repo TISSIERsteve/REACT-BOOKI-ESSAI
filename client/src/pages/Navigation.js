@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Formulaire from "../components/Formulaire";
 
 const Navigation = () => {
@@ -13,6 +14,9 @@ const Navigation = () => {
 					></img>
 				</div>
 				<div className="brand">
+					<Link to="seConnecter">
+						<h3>Se connecter</h3>
+					</Link>
 					<h3>Hébergements</h3>
 					<h3>Activités</h3>
 				</div>

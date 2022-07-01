@@ -1,0 +1,35 @@
+// HEADER
+.header {
+      background-color: $color-1;
+      color: $color-2;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .admin {
+            display: flex;
+            font-size: 2rem;     
+            margin-left: 3rem; 
+            
+            a {
+                  color: $color-2;
+                  text-decoration: none;
+            }
+      }
+
+      .search {
+            input {
+                  height: 2.5rem;
+            }
+      }
+
+      .items {
+            margin-right: 5rem;
+            width: 10rem;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-evenly;
+      }
+
+}

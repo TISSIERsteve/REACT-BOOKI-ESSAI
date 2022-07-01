@@ -8,8 +8,11 @@ exports.signup = async (req, res) => {
 		.hash(req.body.password, 10)
 		.then(hash => {
 			const user = new User({
-				name: req.body.name,
+				name: req.body.nom,
 				email: req.body.email,
+				city: req.body.ville,
+				phone: req.body.phone,
+				country: req.body.country,
 				password: hash,
 			});
 			user
