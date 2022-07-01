@@ -3,7 +3,6 @@ import axios from "axios";
 const { REACT_APP_API_URL } = process.env;
 
 const NewHotel = () => {
-	// const [postPicture, setPostPicture] = useState(null);
 	const [files, setFiles] = useState("");
 	console.log(files);
 	const [hotel, setHotel] = useState("");
@@ -18,10 +17,7 @@ const NewHotel = () => {
 	const textareaRegex = /(.*[a-z]){5,30}/;
 
 	// ENVOI IMAGE
-	// const handlePicture = e => {
-	// 	setPostPicture(e.target.files[0]);
-	// };
-	const addImg = e => {
+	const handleAddImg = e => {
 		e.preventDefault();
 		if (
 			testRegex.test(hotel) &&
@@ -31,10 +27,10 @@ const NewHotel = () => {
 			textareaRegex.test(description)
 		) {
 			const formData = new FormData();
-			formData.append("imageUrl", files);
 			formData.append("name", hotel);
 			formData.append("city", ville);
 			formData.append("address", adresse);
+			formData.append("imageUrl", files);
 			formData.append("description", description);
 			formData.append("prix", prix);
 
@@ -66,27 +62,23 @@ const NewHotel = () => {
 			</div>
 
 			<div className="right">
-				<form>
+				<form onSubmit={handleAddImg}>
 					<div className="container-image">
 						<div className="select-image">
-							<label>Insérer une photo</label>
+							<label htmlFor="file">Insérer une photo</label>
 							<input
-								required
+								// required
 								type="file"
 								id="file"
-								// multiple
+								multiple
 								name="file"
-								// onChange={e => handlePicture(e)}
-								onChange={e => setFiles(e.target.files[0])}
+								onChange={e => setFiles(e.target.files)}
 							/>
 						</div>
 						<img
-							className="image-hotel"
-							// src={postPicture}
-							// alt=""
 							src={
 								files
-									? URL.createObjectURL(files)
+									? URL.createObjectURL(files[0])
 									: "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
 							}
 							alt=""
@@ -205,9 +197,7 @@ const NewHotel = () => {
 							/>
 							<span id="span5"></span>
 						</li>
-						<button onClick={addImg} className="create">
-							Créer
-						</button>
+						<button className="create">Créer</button>
 						<br />
 						<button type="reset">Annuler</button>
 					</ul>
