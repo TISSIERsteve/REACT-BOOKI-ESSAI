@@ -1,11 +1,15 @@
 const Hotel = require("../models/HotelsModels");
+const fs = require("fs");
 
 // CREATE
 exports.createHotel = async (req, res, next) => {
-	console.log(req.body);
+	console.log(req.file);
 	const info = req.body;
 	const newHotel = new Hotel({
 		...info,
+		// imageUrl: `${req.protocol}://${req.get("host")}/images/${
+		// 	req.file.filename
+		// }`,
 	});
 	try {
 		const createHotel = await newHotel.save();

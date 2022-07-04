@@ -3,8 +3,10 @@ import axios from "axios";
 const { REACT_APP_API_URL } = process.env;
 
 const NewHotel = () => {
-	const [files, setFiles] = useState("");
-	console.log(files);
+	const [img, setImg] = useState();
+	// console.log("image", img);
+	const [file, setFile] = useState("");
+	// console.log("file", file);
 	const [hotel, setHotel] = useState("");
 	const [ville, setVille] = useState("");
 	const [adresse, setAdresse] = useState("");
@@ -17,6 +19,11 @@ const NewHotel = () => {
 	const textareaRegex = /(.*[a-z]){5,30}/;
 
 	// ENVOI IMAGE
+	const handlePicture = e => {
+		setImg(URL.createObjectURL(e.target.files[0]));
+		setFile(e.target.files);
+	};
+
 	const handleAddImg = e => {
 		e.preventDefault();
 		if (
@@ -26,20 +33,22 @@ const NewHotel = () => {
 			testRegex.test(adresse) &&
 			textareaRegex.test(description)
 		) {
-			const formData = new FormData();
-			formData.append("name", hotel);
-			formData.append("city", ville);
-			formData.append("address", adresse);
-			formData.append("imageUrl", files);
-			formData.append("description", description);
-			formData.append("prix", prix);
+			Object.values(file).map(async file => {
+				const formData = new FormData();
+				formData.append("name", hotel);
+				formData.append("city", ville);
+				formData.append("address", adresse);
+				formData.append("imageUrl", file.name);
+				formData.append("description", description);
+				formData.append("prix", prix);
 
-			axios
-				.post(`${REACT_APP_API_URL}api/hotels`, formData)
-				.then(res => {
-					console.log("envoyer");
-				})
-				.catch(err => console.log(err));
+				axios
+					.post(`${REACT_APP_API_URL}api/hotels`, formData)
+					.then(res => {
+						console.log("envoyer");
+					})
+					.catch(err => console.log(err));
+			});
 		} else {
 			alert("Veuillez à remplir tous les champs correctement");
 			return;
@@ -65,24 +74,22 @@ const NewHotel = () => {
 				<form onSubmit={handleAddImg}>
 					<div className="container-image">
 						<div className="select-image">
+							{/* ***************** PARTIE IMAGE ******************/}
 							<label htmlFor="file">Insérer une photo</label>
-							<input
-								// required
-								type="file"
-								id="file"
-								multiple
-								name="file"
-								onChange={e => setFiles(e.target.files)}
-							/>
-						</div>
-						<img
-							src={
-								files
-									? URL.createObjectURL(files[0])
-									: "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+							<input type="file" onChange={e => handlePicture(e)} />
+							{
+								<img
+									src={
+										img
+											? img
+											: "https://icon-library.com/images/no-image-icon/no-image-icon-0.jpg"
+									}
+									alt=""
+								/>
 							}
-							alt=""
-						/>
+						</div>
+						{/* ******************* FIN ******************** */}
+
 						<button onClick={removeImg}>Supprimer</button>
 					</div>
 					<ul className="container-descriptif">
@@ -208,3 +215,24 @@ const NewHotel = () => {
 };
 
 export default NewHotel;
+
+// import React, { useState } from "react";
+
+// const NewHotel = () => {
+// 	const [img, setImg] = useState();
+// 	console.log(img);
+
+// 	const onImageChange = e => {
+// 		const [file] = e.target.files;
+// 		setImg(URL.createObjectURL(file));
+// 	};
+
+// 	return (
+// 		<div>
+// 			<input type="file" onChange={onImageChange} />
+// 			<img src={img} alt="" />
+// 		</div>
+// 	);
+// };
+
+// export default NewHotel;
