@@ -10,7 +10,12 @@
 
       .logo {
             width: 10rem;
+        
+            &:hover {
+                  transform: scale(1.2);
+            }
       }
+
       
       .brand {
             display: flex;

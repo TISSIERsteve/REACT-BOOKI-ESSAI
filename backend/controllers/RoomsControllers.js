@@ -2,11 +2,15 @@ const Room = require("../models/RoomsModels");
 
 // CREATE
 exports.createRoom = async (req, res, next) => {
-	const newRoom = new Room(req.body);
+	console.log(req.body);
+	const infoRooms = req.body;
+	const newRoom = new Room({
+		...infoRooms,
+	});
 
 	try {
-		const savedRoom = await newRoom.save();
-		res.status(200).json(newRoom);
+		const createRoom = await newRoom.save();
+		res.status(200).json(createRoom);
 	} catch (err) {
 		res.status(500).json(err);
 	}

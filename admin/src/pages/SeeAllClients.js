@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 
-// Components
-import SeeAllClientsItem from "../components/SeeAllClientsItem";
 const { REACT_APP_API_URL } = process.env;
 
 const SeeAllClients = () => {

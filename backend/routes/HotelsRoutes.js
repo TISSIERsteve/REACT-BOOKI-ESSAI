@@ -10,6 +10,9 @@ router.post("/", multer, hotelCtrl.createHotel);
 // UPDATE Hôtel
 router.put("/:id", hotelCtrl.updateHotel);
 
+// UPDATE Image Hôtel
+router.put("/image/:id", multer, hotelCtrl.updateImageHotel);
+
 // DELETE Hôtel
 router.delete("/:id", hotelCtrl.deleteHotel);
 

@@ -11,9 +11,7 @@ const Headers = () => {
 			<div className="admin">
 				<Link to="/">Administrateur</Link>
 			</div>
-			<>
-				<Search></Search>
-			</>
+			<>{/* <Search></Search> */}</>
 			<>
 				<Items></Items>
 			</>

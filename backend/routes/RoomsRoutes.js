@@ -2,6 +2,7 @@ const express = require("express");
 const router = express();
 const roomCtrl = require("../controllers/RoomsControllers");
 const token = require("../middleware/AuthMiddleware");
+const multer = require("../middleware/Multer");
 
 // CREATE
 router.post("/", roomCtrl.createRoom);

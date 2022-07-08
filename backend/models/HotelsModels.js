@@ -4,14 +4,19 @@ const hotelsSchema = new mongoose.Schema({
 	name: {
 		type: String,
 		required: true,
+		uppercase: true,
+		trim: true,
 	},
 	city: {
 		type: String,
 		required: true,
+		uppercase: true,
+		trim: true,
 	},
 	address: {
 		type: String,
 		required: true,
+		trim: true,
 	},
 	imageUrl: {
 		type: String,
@@ -20,6 +25,7 @@ const hotelsSchema = new mongoose.Schema({
 	description: {
 		type: String,
 		required: true,
+		trim: true,
 	},
 	prix: {
 		type: String,

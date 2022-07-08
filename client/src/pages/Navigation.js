@@ -6,13 +6,16 @@ const Navigation = () => {
 	return (
 		<div className="container">
 			<nav className="navigation">
-				<div>
-					<img
-						className="logo"
-						src="../assets/logo/Booki.png"
-						alt="Booki"
-					></img>
-				</div>
+				<Link to="/">
+					<div>
+						<img
+							className="logo"
+							src="../assets/logo/Booki.png"
+							alt="Booki"
+							title="Retour Accueil"
+						></img>
+					</div>
+				</Link>
 				<div className="brand">
 					<Link to="seConnecter">
 						<h3>Se connecter</h3>

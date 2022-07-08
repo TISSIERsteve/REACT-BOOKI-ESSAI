@@ -1,5 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// Pages
+import Hotel from "./pages/Hotel";
+
 // Components
 import Footer from "./pages/Footer";
 import Inscription from "./pages/Inscription";
@@ -15,7 +18,7 @@ function App() {
 				</header>
 				<Routes>
 					<Route path="/" element={<Main></Main>}></Route>
-
+					<Route path="/hotel/:id" element={<Hotel></Hotel>}></Route>
 					<Route path="*" element={<Main></Main>}></Route>
 				</Routes>
 

@@ -1,17 +1,17 @@
 # CRUD HOTEL
 
-# POST http://localhost:3001/api/hotels 
-# Content-Type: application/json 
+POST http://localhost:3001/api/hotels 
+Content-Type: application/json 
 
-# {
-#      	"name": "Le Palace",
-# 	"type":"Hotel",
-# 	"city": "France",
-# 	"address":"Balbla",
-# 	"distance": "500",
-#       "description":"bla",
-#       "moinsCher":"10"
-# }
+{
+     	"name": "Le Palace",
+	"city": "France",
+	"address": "Balbla",
+	"imageUrl": "ffff",
+      "description": "bla",
+	"prix": "59"
+      
+}
 
 # PUT  http://localhost:3001/api/hotels/62b3fe2f1b48bac763cbacb3
 # Content-Type: application/json
@@ -88,7 +88,9 @@
 #       	"title": "Suite Impérial",
 # 		"price": "30000",
 # 		"maxPeople": "10",
-# 		"description": "Lumineuse"
+# 		"description": "Lumineuse",
+#             "roomNumbers":"325",
+#             "rooms":"file"
 # }
 
 # PUT http://localhost:3001/api/rooms/62b46f893524c2f799b90462

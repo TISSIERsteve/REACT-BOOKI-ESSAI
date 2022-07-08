@@ -11,7 +11,7 @@ const Formulaire = () => {
 				<button>Rechercher</button>
 			</form>
 
-			<article className="article-form">
+			{/* <article className="article-form">
 				<h2>Filtres</h2>
 
 				<Link to="#">
@@ -26,7 +26,7 @@ const Formulaire = () => {
 				<Link to="#">
 					<i className="fas fa-dog"></i>Animaux autorisés
 				</Link>
-			</article>
+			</article> */}
 
 			<article className="article-form2">
 				<Link to="#">

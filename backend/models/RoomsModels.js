@@ -4,21 +4,27 @@ const RoomSchema = new mongoose.Schema(
 	{
 		title: {
 			type: String,
-			required: true,
+			// required: true,
 		},
 		price: {
 			type: Number,
-			required: true,
+			// required: true,
 		},
 		maxPeople: {
 			type: Number,
-			required: true,
+			// required: true,
 		},
 		description: {
 			type: String,
-			required: true,
+			// required: true,
 		},
-		roomNumbers: [{ number: Number, indisponiblesDates: { type: [Date] } }],
+		rooms: {
+			type: [String],
+		},
+		roomNumbers: {
+			type: Number,
+			// required: true,
+		},
 	},
 	{ timestamps: true },
 );

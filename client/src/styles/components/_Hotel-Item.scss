@@ -1,0 +1,23 @@
+// HOTELITEM
+      .details {
+              display: flex;
+              padding: 5rem;
+              margin-bottom: 5rem;
+
+      .details-image {
+              flex: 1 50rem;
+      }
+
+      .details-image img {
+              max-width: 50rem;
+              width: 100%;
+      }
+
+      .details-info {
+              flex: 1 30rem;
+
+              li {
+                      margin-bottom: 2rem;
+              }
+      }  
+}

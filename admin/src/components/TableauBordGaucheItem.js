@@ -35,7 +35,7 @@ const TableauBordGaucheItem = () => {
 					<ul>
 						<li>
 							<Link to="#">
-								<i className="fas fa-bed"></i>Nouvelle Chambre
+								<i className="fas fa-bed"></i>Nouvelle Activitées
 							</Link>
 						</li>
 					</ul>
@@ -87,7 +87,7 @@ const TableauBordGaucheItem = () => {
 					</ul>
 				</div>
 				<div className="div3">
-					<h3>Informations</h3>
+					<h3>Modifications</h3>
 					<ul>
 						<li>
 							<Link to="seeAllClients">
@@ -98,7 +98,7 @@ const TableauBordGaucheItem = () => {
 					</ul>
 					<ul>
 						<li>
-							<Link to="#">
+							<Link to="seeAllHotels">
 								<i className="fas fa-hotel"></i>Hôtel
 							</Link>
 						</li>
@@ -106,8 +106,8 @@ const TableauBordGaucheItem = () => {
 					<ul>
 						<li>
 							<Link to="#">
-								<i className="fas fa-bed"></i>
-								Chambre
+								<i className=" fas fa-biking"></i>
+								Activitées
 							</Link>
 						</li>
 					</ul>

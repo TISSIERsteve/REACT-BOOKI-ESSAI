@@ -8,9 +8,9 @@ exports.updateUser = async (req, res, next) => {
 			{ $set: req.body },
 			{ new: true },
 		);
-		res.status(200).json(updatedUser);
+		return res.status(200).json(updatedUser);
 	} catch (err) {
-		res.status(500).json(err);
+		return res.status(500).json(err);
 	}
 };
 
@@ -18,9 +18,9 @@ exports.updateUser = async (req, res, next) => {
 exports.getAllUsers = async (req, res, next) => {
 	try {
 		const users = await User.find();
-		res.status(200).json(users);
+		return res.status(200).json(users);
 	} catch (err) {
-		res.status(500).json(err);
+		return res.status(500).json(err);
 	}
 };
 
@@ -28,9 +28,9 @@ exports.getAllUsers = async (req, res, next) => {
 exports.getOneUser = async (req, res, next) => {
 	try {
 		const user = await User.findById(req.params.id);
-		res.status(200).json(user);
+		return res.status(200).json(user);
 	} catch (err) {
-		res.status(500).json(err);
+		return res.status(500).json(err);
 	}
 };
 
@@ -38,8 +38,8 @@ exports.getOneUser = async (req, res, next) => {
 exports.deleteUser = async (req, res, next) => {
 	try {
 		await User.findByIdAndDelete(req.params.id);
-		res.status(200).json("Client supprimer");
+		return res.status(200).json("Client supprimer");
 	} catch (err) {
-		res.status(500).json(err);
+		return res.status(500).json(err);
 	}
 };
